@@ -23,3 +23,9 @@ As tecnologias e técnicas que eu escolhi me aprofundar com esse projeto foram:
 - **Unit Testing, UI Testing e TDD:** testar sua aplicação do início ao fim é o melhor método para manter a qualidade do software e entender como esses conceitos são aplicados no desenvolvimento iOS é um conhecimento que tenho como meta de aprendizado.
 
 ## Telas escolhidas
+
+<div>
+  <img src="screenshots/home.png" width="300">
+  <img src="screenshots/search.png" width="300">
+  <img src="screenshots/player.png" width="300">
+</div>
