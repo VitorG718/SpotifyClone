@@ -25,7 +25,7 @@ As tecnologias e técnicas que eu escolhi me aprofundar com esse projeto foram:
 ## Telas escolhidas
 
 <div>
-  <img src="screenshots/home.png" width="300">
-  <img src="screenshots/search.png" width="300">
-  <img src="screenshots/player.png" width="300">
+  <img src="screenshots/home.png" width="250">
+  <img src="screenshots/search.png" width="250">
+  <img src="screenshots/player.png" width="250">
 </div>
