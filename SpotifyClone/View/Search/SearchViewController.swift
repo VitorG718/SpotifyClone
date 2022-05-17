@@ -19,7 +19,7 @@ class SearchViewController: UIViewController {
         layout.sectionInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
         
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
-        collectionView.register(SearchCardCell.self, forCellWithReuseIdentifier: searchCellIdentifier)
+        collectionView.register(SearchCard.Cell.self, forCellWithReuseIdentifier: searchCellIdentifier)
         collectionView.backgroundColor = .clear
         collectionView.isScrollEnabled = true
         collectionView.showsVerticalScrollIndicator = false
@@ -75,27 +75,27 @@ extension SearchViewController: UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: searchCellIdentifier, for: indexPath) as! SearchCardCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: searchCellIdentifier, for: indexPath) as! SearchCard.Cell
         cell.configure(with: data[indexPath.row])
         return cell
     }
 }
 
 let data = [
-    SearchCardViewModel(title: "Pop", imageUrl: "playlist_image_1", color: .purple),
-    SearchCardViewModel(title: "Rock", imageUrl: "playlist_image_1", color: .red),
-    SearchCardViewModel(title: "Pop", imageUrl: "playlist_image_1", color: .purple),
-    SearchCardViewModel(title: "Rock", imageUrl: "playlist_image_1", color: .blue),
-    SearchCardViewModel(title: "Pop", imageUrl: "playlist_image_1", color: .purple),
-    SearchCardViewModel(title: "Rock", imageUrl: "playlist_image_1", color: .red),
-    SearchCardViewModel(title: "Pop", imageUrl: "playlist_image_1", color: .purple),
-    SearchCardViewModel(title: "Rock", imageUrl: "playlist_image_1", color: .blue),
-    SearchCardViewModel(title: "Pop", imageUrl: "playlist_image_1", color: .purple),
-    SearchCardViewModel(title: "Rock", imageUrl: "playlist_image_1", color: .red),
-    SearchCardViewModel(title: "Pop", imageUrl: "playlist_image_1", color: .purple),
-    SearchCardViewModel(title: "Rock", imageUrl: "playlist_image_1", color: .blue),
-    SearchCardViewModel(title: "Pop", imageUrl: "playlist_image_1", color: .purple),
-    SearchCardViewModel(title: "Rock", imageUrl: "playlist_image_1", color: .red),
-    SearchCardViewModel(title: "Pop", imageUrl: "playlist_image_1", color: .purple),
-    SearchCardViewModel(title: "Rock", imageUrl: "playlist_image_1", color: .blue),
+    SearchCard.ViewModel(title: "Pop", imageUrl: "playlist_image_1", color: .purple),
+    SearchCard.ViewModel(title: "Rock", imageUrl: "playlist_image_1", color: .red),
+    SearchCard.ViewModel(title: "Pop", imageUrl: "playlist_image_1", color: .purple),
+    SearchCard.ViewModel(title: "Rock", imageUrl: "playlist_image_1", color: .blue),
+    SearchCard.ViewModel(title: "Pop", imageUrl: "playlist_image_1", color: .purple),
+    SearchCard.ViewModel(title: "Rock", imageUrl: "playlist_image_1", color: .red),
+    SearchCard.ViewModel(title: "Pop", imageUrl: "playlist_image_1", color: .purple),
+    SearchCard.ViewModel(title: "Rock", imageUrl: "playlist_image_1", color: .blue),
+    SearchCard.ViewModel(title: "Pop", imageUrl: "playlist_image_1", color: .purple),
+    SearchCard.ViewModel(title: "Rock", imageUrl: "playlist_image_1", color: .red),
+    SearchCard.ViewModel(title: "Pop", imageUrl: "playlist_image_1", color: .purple),
+    SearchCard.ViewModel(title: "Rock", imageUrl: "playlist_image_1", color: .blue),
+    SearchCard.ViewModel(title: "Pop", imageUrl: "playlist_image_1", color: .purple),
+    SearchCard.ViewModel(title: "Rock", imageUrl: "playlist_image_1", color: .red),
+    SearchCard.ViewModel(title: "Pop", imageUrl: "playlist_image_1", color: .purple),
+    SearchCard.ViewModel(title: "Rock", imageUrl: "playlist_image_1", color: .blue),
 ]
