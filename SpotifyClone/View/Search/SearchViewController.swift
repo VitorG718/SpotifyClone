@@ -9,8 +9,6 @@ import UIKit
 import SnapKit
 import Components
 
-let searchCellIdentifier = "searchCellIdentifier"
-
 class SearchViewController: UIViewController {
 
     private lazy var collectionView: UICollectionView = {
@@ -19,7 +17,7 @@ class SearchViewController: UIViewController {
         layout.sectionInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
         
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
-        collectionView.register(SearchCard.Cell.self, forCellWithReuseIdentifier: searchCellIdentifier)
+        collectionView.register(SearchCard.Cell.self, forCellWithReuseIdentifier: SearchCard.Cell.identifier)
         collectionView.backgroundColor = .clear
         collectionView.isScrollEnabled = true
         collectionView.showsVerticalScrollIndicator = false
@@ -56,14 +54,14 @@ class SearchViewController: UIViewController {
     private func addConstraints() {
         searchField.snp.makeConstraints { make in
             make.leading.trailing.equalToSuperview().inset(view.frame.width * 0.03)
-            make.top.equalTo(view.safeAreaLayoutGuide.snp.top)
+            make.top.equalTo(view.safeAreaLayoutGuide)
             make.height.equalToSuperview().multipliedBy(0.06)
         }
         
         collectionView.snp.makeConstraints { make in
             make.leading.trailing.equalTo(searchField)
             make.top.equalTo(searchField.snp_bottomMargin).inset(-(view.frame.height * 0.025))
-            make.bottom.equalTo(view.safeAreaLayoutGuide.snp.bottom)
+            make.bottom.equalTo(view.safeAreaLayoutGuide)
         }
     }
 
@@ -75,7 +73,7 @@ extension SearchViewController: UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: searchCellIdentifier, for: indexPath) as! SearchCard.Cell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: SearchCard.Cell.identifier, for: indexPath) as! SearchCard.Cell
         cell.configure(with: data[indexPath.row])
         return cell
     }
