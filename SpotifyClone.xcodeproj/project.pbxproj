@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4E1CA86828382FF80061D6C6 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E1CA86728382FF80061D6C6 /* TabBarViewController.swift */; };
 		4E520C5E282444B6003ABDBF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E520C5D282444B6003ABDBF /* AppDelegate.swift */; };
 		4E520C60282444B6003ABDBF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E520C5F282444B6003ABDBF /* SceneDelegate.swift */; };
 		4E520C62282444B6003ABDBF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E520C61282444B6003ABDBF /* ViewController.swift */; };
@@ -18,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4E1CA86728382FF80061D6C6 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		4E520C5A282444B6003ABDBF /* SpotifyClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpotifyClone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4E520C5D282444B6003ABDBF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4E520C5F282444B6003ABDBF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -42,6 +44,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4E1CA86628382FDF0061D6C6 /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				4E1CA86728382FF80061D6C6 /* TabBarViewController.swift */,
+			);
+			path = TabBar;
+			sourceTree = "<group>";
+		};
 		4E520C51282444B6003ABDBF = {
 			isa = PBXGroup;
 			children = (
@@ -91,6 +101,7 @@
 		4E520C7C28244AF2003ABDBF /* View */ = {
 			isa = PBXGroup;
 			children = (
+				4E1CA86628382FDF0061D6C6 /* TabBar */,
 				4EB5444028244B6300C9D774 /* Search */,
 			);
 			path = View;
@@ -209,6 +220,7 @@
 				4E520C62282444B6003ABDBF /* ViewController.swift in Sources */,
 				4E520C5E282444B6003ABDBF /* AppDelegate.swift in Sources */,
 				4EB5444228244B7D00C9D774 /* SearchViewController.swift in Sources */,
+				4E1CA86828382FF80061D6C6 /* TabBarViewController.swift in Sources */,
 				4E520C60282444B6003ABDBF /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
